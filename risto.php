@@ -30,11 +30,11 @@ class Restaurant {
         echo "Ho aggiunto un nuovo piatto ($dish, $price euro) al menu.\n";
     }
 
-    private function getDishPrice($dish, $dishPrices) {
+    public function getDishPrice($dish, $dishPrices) {
         return isset($dishPrices[$dish]) ? $dishPrices[$dish] : 0;
     }
 
-    private function getDrinkPrice($drink, $drinkPrices) {
+    public function getDrinkPrice($drink, $drinkPrices) {
         return isset($drinkPrices[$drink]) ? $drinkPrices[$drink] : 0;
     }
 }
