@@ -63,7 +63,7 @@ $batman1 = new BatMobile($razzi1, $scudo1);
 $batman1->pulsanteAttacca();
 $batman1->pulsanteDifendi();
 
-$batman2 = new BatMobile(new Laser('giallo'), new Scudo());
-$batman2->front->attacca();
-$batman3 = new BatMobile (new Razzi, new Fumo);
-$batman3->back->difendi();
+$batman2 = new BatMobile(new Razzi , new Scudo());
+$batman2->pulsanteAttacca();
+$batman3 = new BatMobile (new Laser ('Verde'), new Fumo);
+$batman3->pulsanteDifendi();

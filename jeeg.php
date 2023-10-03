@@ -33,9 +33,20 @@ class Jeeg {
             $this->atkR();
         } elseif ($side == 'sx'){
             $this->atkL();
+        }else{
+            echo "Il Jeeg robot non capisce e va in errore\n";
         }
     }
 }
+
+$jeeg1 = new Jeeg(new Minigun(), new Lanciafiamme(), new Propulsori());
+
+$jeeg1->dinAtk('sx');
+$jeeg1->dinAtk('dx');
+$jeeg1->dinAtk('pluto');
+
+$jeeg2 = new Jeeg(new Trivella(), new Trivella(), new Piedi());
+
 
 abstract class Arms { 
     abstract public function atk();
@@ -43,19 +54,19 @@ abstract class Arms {
 
 class Trivella extends Arms {
     public function atk(){
-        echo "ti faccio diventare un colabrodo \n";
+        echo "Ti faccio diventare un colabrodo\n";
     }
 }
 
 class Lanciafiamme extends Arms {
     public function atk(){
-        echo "Napalm \n";
+        echo "Napalm\n";
     }
 }
 
 class Minigun extends Arms {
     public function atk(){
-        echo "ti buco \n";
+        echo "Ti buco\n";
     }
 }
 
@@ -65,13 +76,18 @@ abstract class Legs {
 
 class Piedi extends Legs {
     public function move(){
-        echo "guarda come piando \n";
+        echo "Guarda come pianco\n";
     }
 }
 
-$jeeg1 = new Jeeg(new Trivella(), new Lanciafiamme(), new Piedi());
-$jeeg1->atkR();
-$jeeg1->combo();
+class Cingoli extends Legs{
+    public function move(){
+        echo "Posso camminare su qualsiasi superficie\n";
+    }
+}
 
-$jeeg2 = new Jeeg(new Minigun(), new Lanciafiamme(), new Piedi());
-$jeeg2->atkL();
+class Propulsori extends Legs{
+    public function move(){
+        echo "Volo a velocità mach-10\n";
+    }
+}
