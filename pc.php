@@ -57,9 +57,9 @@ class Computer {
     }
 }
 
-$ram = new RAM(8); // Specifica la dimensione della RAM in GB
-$motherboard = new Motherboard("ASUS"); // Specifica il modello della scheda madre
-$videoCard = new VideoCard("NVIDIA"); // Specifica la marca della scheda video
+$ram = new RAM(8); 
+$motherboard = new Motherboard("ASUS"); 
+$videoCard = new VideoCard("NVIDIA"); 
 $otherComponent = "Altre specifiche";
 
 $computer = new Computer($ram, $motherboard, $videoCard, $otherComponent);
